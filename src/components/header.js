@@ -1,10 +1,10 @@
 const Header = () => {
   return (
     <>
-      <header>
-        <span>profile</span>
-        <span>icon</span>
-        <span>search</span>
+      <header className="header">
+        <span className="profile-icon">profile</span>
+        <span className="webtoon-logo">icon</span>
+        <span className="search-icon">search</span>
       </header>
     </>
   );

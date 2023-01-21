@@ -506,4 +506,5 @@ export const webtoons = [
         img: '../img/sat12.jpeg',
         url: 'https://comic.naver.com/webtoon/list?titleId=803934&weekday=sat',
         genre: '로맨스'
+    }
 ]

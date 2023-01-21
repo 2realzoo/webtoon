@@ -1,7 +1,8 @@
 import './App.css';
+import WebtoonList from './components/webtoonList';
 import Nav from './components/nav';
 import { FilterBar } from './components/filters';
-import WebtoonList from './components/webtoonList';
+
 
 function App() {
   return (

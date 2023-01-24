@@ -15,7 +15,7 @@
     align-items: center;
     padding: 10px;
     
-    background-color: #ccc;
+    /* background-color: #ccc; */
 }
 .day-filter ul {
     width: 400px;
@@ -23,6 +23,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.day-filter li {
+    color: var( --color-text);
 }
 .genre-filter {
     width: 60px;

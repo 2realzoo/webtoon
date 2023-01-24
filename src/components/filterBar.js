@@ -37,7 +37,7 @@ function FilterBar({ filteredData, setFilteredData }) {
                 </ul>
             </div>
             <div className="genre-filter">
-                <FaFilter onClick={handleClickFilter} />
+                <FaFilter className="icon" onClick={handleClickFilter} />
                 <div className={`dropdown-content ${useFilter?``:`hidden`}`}>
                     {genres.map((genre, idx) =>
                         <p key={idx} onClick={handleClickGenre}>{genre}</p>)

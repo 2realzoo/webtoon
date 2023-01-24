@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.header > span {
+.header > * {
   height: 100%;
   display: flex;
   justify-content: center;

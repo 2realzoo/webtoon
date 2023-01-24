@@ -6,12 +6,15 @@ import { useState } from 'react';
 import { webtoons } from './repository/webtoons';
 
 function App() {
-  const [filteredData, setFilteredData] = useState(webtoons)
+  const [filteredData, setFilteredData] = useState(webtoons);
 
   return (
     <div className="App">
       <Header />
-      <FilterBar filteredData={filteredData} setFilteredData={setFilteredData} />
+      <FilterBar
+        filteredData={filteredData}
+        setFilteredData={setFilteredData}
+      />
       <WebtoonList filteredData={filteredData} />
     </div>
   );

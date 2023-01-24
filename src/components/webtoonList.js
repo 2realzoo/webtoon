@@ -5,7 +5,8 @@ import styles from "./webtoonList.module.css";
 export default function WebtoonList({ filteredData }) {
   return (
     <ul className={styles.container}>
-      {filteredData.map((toon) => {
+      {filteredData.length === 0? '해당하는 콘텐츠가 없습니다':
+        filteredData.map((toon) => {
         return (
           <li className={styles.li} key={toon.id}>
             <img className={styles.toon} src={toon.img} />

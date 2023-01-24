@@ -13,16 +13,19 @@ function FilterBar({ filteredData, setFilteredData }) {
 
     const handleClickDay = e => {
         setSelectedDay(e.target.textContent);
-        console.log(e.target.textContent)
     };
     useEffect(() => {
         setFilteredData(filterByDay(webtoons, selectedDay));
-        console.log(selectedDay);
     }, [selectedDay])
 
     const handleClickFilter = () => {
         useFilter? setUseFilter(false) :setUseFilter(true);
     };
+    const handleClickGenre = e => {
+        const selectedGenre = e.target.textContent;
+        const DayContent = filterByDay(webtoons, selectedDay);
+        setFilteredData(filterByGenre(DayContent, selectedGenre));
+    }
 
     return (
         <div className="filter-bar-wrapper">
@@ -37,7 +40,7 @@ function FilterBar({ filteredData, setFilteredData }) {
                 <FaFilter onClick={handleClickFilter} />
                 <div className={`dropdown-content ${useFilter?``:`hidden`}`}>
                     {genres.map((genre, idx) =>
-                        <a href="#" key={idx}>{genre}</a>)
+                        <p key={idx} onClick={handleClickGenre}>{genre}</p>)
                     }
                 </div>
             </div>

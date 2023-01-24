@@ -237,21 +237,21 @@ export const webtoons = [
         id:'wed10',
         title:'급식아빠',
         day:'수',
-        img:'../img/wed010.jpeg',
+        img:'../img/wed10.jpeg',
         url:'https://comic.naver.com/webtoon/list?titleId=758662&weekday=wed',
         genre:'액션',
     },{
         id:'wed11',
         title:'연놈',
         day:'수',
-        img:'../img/wed011.jpeg',
+        img:'../img/wed11.jpeg',
         url:'https://comic.naver.com/webtoon/list?titleId=667573&weekday=wed',
         genre:'드라마',
     },{
         id:'wed12',
         title:'내가 죽기로 결심한 것은',
         day:'수',
-        img:'../img/wed012.jpeg',
+        img:'../img/wed12.jpeg',
         url:'https://comic.naver.com/webtoon/list?titleId=783523&weekday=wed',
         genre:'로맨스',
     },{
@@ -545,7 +545,7 @@ export const webtoons = [
         id: 'sun6',
         title: '시월드가 내게 집착한다',
         day: '일',
-        img: '../img/sun.jpg',
+        img: '../img/sun6.jpg',
         url: 'https://comic.naver.com/webtoon/list?titleId=785251&weekday=sun',
         genre: '로맨스'
     }, {

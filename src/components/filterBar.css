@@ -28,8 +28,8 @@
     width: 60px;
     display: flex;
     justify-content: flex-end;
-    
-    z-index: 99;
+    z-index: 9999;
+    position: relative;
 }
 .genre-filter .hidden {
     display: none;
@@ -37,4 +37,14 @@
 .dropdown-content {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 5px;
+}
+.dropdown-content p {
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;    
+    color: black;
 }

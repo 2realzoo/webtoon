@@ -12,7 +12,7 @@ function App() {
 
   return (
     <DarkModeProvider>
-      <Header />
+      <Header setFilteredData={setFilteredData}/>
       <FilterBar
         filteredData={filteredData}
         setFilteredData={setFilteredData}

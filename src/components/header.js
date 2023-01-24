@@ -2,7 +2,10 @@ import { FaSearch } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 // import { logo } from '../../public/img/logo.png';
 import { HiMoon, HiSun } from "react-icons/hi";
-import {useDarkMode} from './DarkMode/DarkMode';
+import { useDarkMode } from './DarkMode/DarkMode';
+import { useState } from 'react';
+import { webtoons } from '../repository/webtoons';
+import styles from './header.module.css'
 
 const Header = ({ setFilteredData }) => {
   const [inputView, setInputView] = useState(false);

@@ -14,8 +14,6 @@
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    
-    /* background-color: #ccc; */
 }
 .day-filter ul {
     width: 400px;
@@ -26,6 +24,17 @@
 }
 .day-filter li {
     color: var( --color-text);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+.active {
+    background: black;
+    color: white;
+    border-radius: 40px;
+}
+.day-filter p {
+    z-index: 99;
 }
 .genre-filter {
     width: 60px;

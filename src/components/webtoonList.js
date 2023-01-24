@@ -9,8 +9,10 @@ export default function WebtoonList({ filteredData }) {
         filteredData.map((toon) => {
         return (
           <li className={styles.li} key={toon.id}>
-            <img className={styles.toon} src={toon.img} />
-            <span className={styles.title}>{toon.title}</span>
+            <a href={toon.url}>
+              <img className={styles.toon} src={toon.img} />
+              <span className={styles.title}>{toon.title}</span>
+            </a>
           </li>
         );
       })}

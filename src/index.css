@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-bg);
 }
 
 li {list-style: none;}
@@ -17,6 +18,17 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --color-text: black;
+  --color-bg: white;
+}
+
+html.dark {
+  --color-text: white;
+  --color-bg: #232424;
+}
+
+/* 스크롤바 커스텀 */
 ::-webkit-scrollbar {
   width: 0.5rem;
 }

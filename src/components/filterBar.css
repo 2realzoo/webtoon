@@ -24,13 +24,12 @@
     justify-content: space-between;
     align-items: center;
 }
-.day-filter li {
-    
-}
 .genre-filter {
     width: 60px;
     display: flex;
     justify-content: flex-end;
+    
+    z-index: 99;
 }
 .genre-filter .hidden {
     display: none;

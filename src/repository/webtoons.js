@@ -506,5 +506,89 @@ export const webtoons = [
         img: '../img/sat12.jpeg',
         url: 'https://comic.naver.com/webtoon/list?titleId=803934&weekday=sat',
         genre: '로맨스'
-    }
+    }, {
+        id: 'sun1',
+        title: '약한영웅',
+        day: '일',
+        img: '../img/sun1.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=710751&weekday=sun',
+        genre: '액션'
+    }, {
+        id: 'sun2',
+        title: '싸움독학',
+        day: '일',
+        img: '../img/sun2.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=736277&weekday=sun',
+        genre: '액션'
+    }, {
+        id: 'sun3',
+        title: '입학용병',
+        day: '일',
+        img: '../img/sun3.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=758150&weekday=sun',
+        genre: '액션'
+    }, {
+        id: 'sun4',
+        title: '사형소년',
+        day: '일',
+        img: '../img/sun4.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=795262&weekday=sun',
+        genre: '스릴러'
+    }, {
+        id: 'sun5',
+        title: '노빠꾸 최하영',
+        day: '일',
+        img: '../img/sun5.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=803480&weekday=sun',
+        genre: '액션'
+    }, {
+        id: 'sun6',
+        title: '시월드가 내게 집착한다',
+        day: '일',
+        img: '../img/sun.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=785251&weekday=sun',
+        genre: '로맨스'
+    }, {
+        id: 'sun7',
+        title: '소녀재판',
+        day: '일',
+        img: '../img/sun7.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=743838&weekday=sun',
+        genre: '드라마'
+    }, {
+        id: 'sun8',
+        title: '가비지타임',
+        day: '일',
+        img: '../img/sun8.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=703844&weekday=sun',
+        genre: '스포츠'
+    }, {
+        id: 'sun9',
+        title: '키미앤조이',
+        day: '일',
+        img: '../img/sun9.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=798177&weekday=sun',
+        genre: '로맨스'
+    }, {
+        id: 'sun10',
+        title: '샤인 스타',
+        day: '일',
+        img: '../img/sun10.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=758665&weekday=sun',
+        genre: '로맨스'
+    }, {
+        id: 'sun11',
+        title: '나 혼자 특성빨로 무한 성장',
+        day: '일',
+        img: '../img/sun11.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=803909&weekday=sun',
+        genre: '액션'
+    }, {
+        id: 'sun12',
+        title: '수희0(tngmlek0)',
+        day: '일',
+        img: '../img/sun12.jpg',
+        url: 'https://comic.naver.com/webtoon/list?titleId=774831&weekday=sun',
+        genre: '드라마'
+    },
 ]

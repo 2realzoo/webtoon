@@ -8,16 +8,29 @@
     word-wrap: break-word;
 }
 .filter-bar-wrapper {
+    width: 490px;
+    height: 30px;
     display: flex;
     flex-direction: row;
-    margin-left: 2vw;
+    align-items: center;
+    padding: 10px;
+    
+    background-color: #ccc;
 }
-.day-filter ul{
+.day-filter ul {
+    width: 400px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .day-filter li {
-    margin-right: 5.5vw;
+    
+}
+.genre-filter {
+    width: 60px;
+    display: flex;
+    justify-content: flex-end;
 }
 .genre-filter .hidden {
     display: none;

@@ -32,12 +32,16 @@ function FilterBar({ filteredData, setFilteredData }) {
             <div className="day-filter">
                 <ul>
                     {days.map((day, idx) => 
-                        <li key = {idx} onClick={handleClickDay}>{day}</li>
+                        <li key={idx} onClick={handleClickDay} className={selectedDay === day ? `active` : ``}>
+                            <p className={selectedDay === day ? `active` : ``}>{day}</p>
+                        </li>
                     )}
                 </ul>
             </div>
             <div className="genre-filter">
-                <FaFilter onClick={handleClickFilter} />
+                <div className="filter-icon">
+                    <FaFilter onClick={handleClickFilter} />
+                </div>
                 <div className={`dropdown-content ${useFilter?``:`hidden`}`}>
                     {genres.map((genre, idx) =>
                         <p key={idx} onClick={handleClickGenre}>{genre}</p>)

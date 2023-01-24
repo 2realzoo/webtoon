@@ -1,6 +1,6 @@
 import { FaSearch } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
-import { logo } from '../../public/img/logo.png';
+// import { logo } from '../../public/img/logo.png';
 
 const Header = () => {
   return (

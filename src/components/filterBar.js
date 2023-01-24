@@ -12,10 +12,12 @@ function FilterBar({ filteredData, setFilteredData }) {
     const [useFilter, setUseFilter] = useState(false);
 
     const handleClickDay = e => {
-        setSelectedDay(e.target.value);
+        setSelectedDay(e.target.textContent);
+        console.log(e.target.textContent)
     };
     useEffect(() => {
         setFilteredData(filterByDay(webtoons, selectedDay));
+        console.log(selectedDay);
     }, [selectedDay])
 
     const handleClickFilter = () => {

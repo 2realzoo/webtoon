@@ -1,14 +1,18 @@
 import './App.css';
 import WebtoonList from './components/webtoonList';
-import Nav from './components/nav';
+import Header from './components/header';
 import { FilterBar } from './components/filters';
+import { useState } from 'react';
+import { webtoons } from './repository/webtoons';
 
 function App() {
+  const [filteredData, setFilteredData] = useState(webtoons)
+
   return (
     <div className="App">
-      <WebtoonList />
-      <Nav />
-      <FilterBar/>
+      <WebtoonList filteredData={filteredData} />
+      <Header />
+      <FilterBar filteredData={filteredData} setFilteredData={setFilteredData} />
     </div>
   );
 }

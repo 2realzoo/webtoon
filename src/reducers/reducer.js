@@ -1,8 +1,8 @@
-import { webtoons } from "../repository/webtoons"
+// import { webtoons } from "../repository/webtoons"
 
-const data = webtoons;
-const rootReducer = (state = data, action) => {
-    switch (action.type) {
+// const data = webtoons;
+// const rootReducer = (state = data, action) => {
+//     switch (action.type) {
 
-    }
-}
+//     }
+// }

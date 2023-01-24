@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header setFilteredData={setFilteredData} />
       <FilterBar
         filteredData={filteredData}
         setFilteredData={setFilteredData}

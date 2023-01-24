@@ -19,7 +19,10 @@ const Header = ({ setFilteredData }) => {
         <span className="webtoon-logo">icon</span>
         <span className="search-icon" onClick={() => setInputView(true)}>
           {inputView ? (
-            <input type="text" onChange={handleSearch}></input>
+            <input
+              type="text"
+              onChange={handleSearch}
+              onBlur={() => setInputView(false)}></input>
           ) : (
             <FaSearch></FaSearch>
           )}

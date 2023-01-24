@@ -1,0 +1,14 @@
+.header {
+  width: 480px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > span {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

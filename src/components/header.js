@@ -1,9 +1,10 @@
 import { FaSearch, FaUser } from 'react-icons/fa';
+import styles from './header.module.css';
 
 const Header = () => {
   return (
     <>
-      <header className="header">
+      <header className={styles.header}>
         <span className="user-icon">
           <FaUser></FaUser>
         </span>

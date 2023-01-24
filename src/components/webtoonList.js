@@ -1,7 +1,7 @@
 import React from "react";
 import { filteredData } from "../repository/webtoons";
 
-export default function WebtoonList() {
+export default function WebtoonList({ filteredData }) {
   return (
     <>
       {filteredData.map((toon) => {

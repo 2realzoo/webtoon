@@ -15,11 +15,15 @@ const Header = ({ setFilteredData }) => {
     setFilteredData(webtoons.filter(ele => ele.title.includes(e.target.value)));
   };
 
+  const handleClickUser = () => {
+
+  };
+
   return (
     <>
       <span onClick={toggleDarkMode}>{!darkMode ? <HiMoon /> : <HiSun />}</span>
       <header className={styles.header}>
-        <span className="profile-icon">
+        <span className="profile-icon" onClick={handleClickUser}>
           <FaUser></FaUser>
         </span>
         <span className="webtoon-logo">icon</span>

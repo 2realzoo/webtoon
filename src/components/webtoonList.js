@@ -1,5 +1,4 @@
 import React from "react";
-import { filteredData } from "../repository/webtoons";
 import styles from "./webtoonList.module.css";
 
 export default function WebtoonList({ filteredData }) {
@@ -10,8 +9,8 @@ export default function WebtoonList({ filteredData }) {
         return (
           <li className={styles.li} key={toon.id}>
             <a href={toon.url}>
-              <img className={styles.toon} src={toon.img} />
-              <span className={styles.title}>{toon.title}</span>
+              <img className={styles.toon} src={toon.img} alt={toon.title} />
+              <div className={styles.title}>{toon.title}</div>
             </a>
           </li>
         );

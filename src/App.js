@@ -5,6 +5,7 @@ import FilterBar from './components/filterBar';
 import { useState } from 'react';
 import { webtoons } from './repository/webtoons';
 import DarkModeProvider from './components/DarkMode/DarkMode';
+import Footer from './components/footer';
 
 function App() {
   const [filteredData, setFilteredData] = useState(webtoons);
@@ -24,6 +25,7 @@ function App() {
         />
       )}
       <WebtoonList filteredData={filteredData} />
+      <Footer />
     </DarkModeProvider>
 
   );

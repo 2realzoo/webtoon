@@ -1,9 +1,8 @@
-
+import Footer from '../src/components/footer'
 import Home from "./page/home";
 import { Route, Routes } from "react-router-dom";
 import Login from "./page/login";
 import MyPage from "./page/myPage";
-
 
 function App() {
   return (

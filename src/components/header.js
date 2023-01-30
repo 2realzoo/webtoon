@@ -7,17 +7,14 @@ import { useState } from 'react';
 import { webtoons } from '../repository/webtoons';
 import styles from './header.module.css';
 
-const Header = ({ setFilteredData }) => {
-  const [inputView, setInputView] = useState(false);
+const Header = ({ setFilteredData, inputView, setInputView }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   const handleSearch = e => {
     setFilteredData(webtoons.filter(ele => ele.title.includes(e.target.value)));
   };
 
-  const handleClickUser = () => {
-
-  };
+  const handleClickUser = () => {};
 
   return (
     <>
@@ -27,17 +24,17 @@ const Header = ({ setFilteredData }) => {
           <FaUser></FaUser>
         </span>
         <span className="webtoon-logo">icon</span>
-        <span className="search-icon" onClick={() => setInputView(true)}>
-          {inputView ? (
-            <input
-              type="text"
-              onChange={handleSearch}
-              autoFocus
-              onBlur={() => setInputView(false)}></input>
-          ) : (
+        {inputView ? (
+          <input
+            type="text"
+            onChange={handleSearch}
+            autoFocus
+            onBlur={() => setInputView(false)}></input>
+        ) : (
+          <span className="search-icon" onClick={() => setInputView(true)}>
             <FaSearch></FaSearch>
-          )}
-        </span>
+          </span>
+        )}
       </header>
     </>
   );

@@ -1,7 +1,8 @@
-// export const SELECT_DAY = "SELECT_DAY";
-// export const SELECT_GENRE = "SELECT_GENRE";
-// export const SET_FILTERED_DATA = "SET_FILTERED_DATA";
+export const USER_INFORMATION = "USER_INFORMATION";
 
-// export const setFilteredData = () => {
-    
-// }
+export const userInformation = (user) => {
+    return {
+        type: USER_INFORMATION,
+        payload: user
+    }
+};

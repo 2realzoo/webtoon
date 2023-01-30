@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './components/login';
-import MyPage from './components/myPage';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
@@ -14,11 +12,7 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <React.StrictMode>
-          <Routes>
-            <Route path='/' element={<App />}></Route>
-            <Route path='/login' element={<Login />}></Route>
-            <Route path='/mypage' element={<MyPage />}></Route>
-          </Routes>
+          <App />
       </React.StrictMode>
     </BrowserRouter>  
   </Provider>

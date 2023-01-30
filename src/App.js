@@ -8,14 +8,21 @@ import DarkModeProvider from './components/DarkMode/DarkMode';
 
 function App() {
   const [filteredData, setFilteredData] = useState(webtoons);
+  const [inputView, setInputView] = useState(false);
   
   return (
     <DarkModeProvider>
-      <Header setFilteredData={setFilteredData}/>
-      <FilterBar
-        filteredData={filteredData}
+      <Header
         setFilteredData={setFilteredData}
+        inputView={inputView}
+        setInputView={setInputView}
       />
+      {inputView ? null : (
+        <FilterBar
+          filteredData={filteredData}
+          setFilteredData={setFilteredData}
+        />
+      )}
       <WebtoonList filteredData={filteredData} />
     </DarkModeProvider>
 

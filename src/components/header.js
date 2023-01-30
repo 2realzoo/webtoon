@@ -17,23 +17,24 @@ const Header = ({ setFilteredData }) => {
     setFilteredData(webtoons.filter(ele => ele.title.includes(e.target.value)));
   };
 
+
   return (
     <>
       <span onClick={toggleDarkMode}>{!darkMode ? <HiMoon /> : <HiSun />}</span>
       <header className={styles.header}>
         {isLogin ? <Link to='/mypage'><FaUser></FaUser></Link> : <Link to='/Login'><FaUser></FaUser></Link>}
         <span className="webtoon-logo">icon</span>
-        <span className="search-icon" onClick={() => setInputView(true)}>
-          {inputView ? (
-            <input
-              type="text"
-              onChange={handleSearch}
-              autoFocus
-              onBlur={() => setInputView(false)}></input>
-          ) : (
+        {inputView ? (
+          <input
+            type="text"
+            onChange={handleSearch}
+            autoFocus
+            onBlur={() => setInputView(false)}></input>
+        ) : (
+          <span className="search-icon" onClick={() => setInputView(true)}>
             <FaSearch></FaSearch>
-          )}
-        </span>
+          </span>
+        )}
       </header>
     </>
   );

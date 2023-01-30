@@ -15,10 +15,6 @@ const Header = ({ setFilteredData }) => {
     setFilteredData(webtoons.filter(ele => ele.title.includes(e.target.value)));
   };
 
-  const handleClickUser = () => {
-
-  };
-
   return (
     <>
       <span onClick={toggleDarkMode}>{!darkMode ? <HiMoon /> : <HiSun />}</span>

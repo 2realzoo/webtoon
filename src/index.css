@@ -34,15 +34,15 @@ html.dark {
 }
 
 ::-webkit-scrollbar-track {
-  border: 1px solid #ccc;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #03C75A;
+  background-color: #989898;
   border-radius: 10px;
   height: 2%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #01db63;
+  background-color: #7a7a7a;
 }

@@ -9,7 +9,7 @@ import DarkModeProvider from './components/DarkMode/DarkMode';
 function App() {
   const [filteredData, setFilteredData] = useState(webtoons);
   const [inputView, setInputView] = useState(false);
-
+  
   return (
     <DarkModeProvider>
       <Header
@@ -25,6 +25,7 @@ function App() {
       )}
       <WebtoonList filteredData={filteredData} />
     </DarkModeProvider>
+
   );
 }
 

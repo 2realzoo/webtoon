@@ -6,10 +6,9 @@ import { useState } from 'react';
 import { webtoons } from './repository/webtoons';
 import DarkModeProvider from './components/DarkMode/DarkMode';
 
-
 function App() {
   const [filteredData, setFilteredData] = useState(webtoons);
-
+  
   return (
     <DarkModeProvider>
       <Header setFilteredData={setFilteredData}/>
@@ -19,6 +18,7 @@ function App() {
       />
       <WebtoonList filteredData={filteredData} />
     </DarkModeProvider>
+
   );
 }
 

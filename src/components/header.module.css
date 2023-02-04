@@ -17,3 +17,10 @@
   position: absolute;
   width: 480px;
 } */
+
+.darkmode {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+}

@@ -3,6 +3,7 @@ import { webtoons } from "../repository/webtoons";
 import { filterByDay, filterByGenre } from "./filters";
 import './filterBar.css';
 import {FaFilter} from 'react-icons/fa'
+import { useSelector } from "react-redux";
 
 function FilterBar({ filteredData, setFilteredData }) {
     const genres = ["드라마", "일상", "개그", "로맨스", "무협", "스포츠", "액션", "스릴러", "판타지"].sort((a, b) => a - b)
@@ -10,17 +11,25 @@ function FilterBar({ filteredData, setFilteredData }) {
     const currentDay = new Date().getDay() - 1 >= 0 ? days[new Date().getDay() - 1] : days[6];
     const [selectedDay, setSelectedDay] = useState(currentDay);
     const [useFilter, setUseFilter] = useState(false);
+    const { searchReducer } = useSelector(state => state);
+
 
     const handleClickDay = e => {
         setSelectedDay(e.target.textContent);
     };
+
     useEffect(() => {
         setFilteredData(filterByDay(webtoons, selectedDay));
     }, [selectedDay])
 
+    useEffect(() => {
+        
+    }, [searchReducer])
+
     const handleClickFilter = () => {
         useFilter? setUseFilter(false) :setUseFilter(true);
     };
+
     const handleClickGenre = e => {
         const selectedGenre = e.target.textContent;
         const DayContent = filterByDay(webtoons, selectedDay);
@@ -32,8 +41,8 @@ function FilterBar({ filteredData, setFilteredData }) {
             <div className="day-filter">
                 <ul>
                     {days.map((day, idx) => 
-                        <li key={idx} onClick={handleClickDay} className={selectedDay === day ? `active` : ``}>
-                            <p className={selectedDay === day ? `active` : ``}>{day}</p>
+                        <li key={idx} onClick={handleClickDay}>
+                            <p className={selectedDay === day && searchReducer === false ? `active` : ``}>{day}</p>
                         </li>
                     )}
                 </ul>

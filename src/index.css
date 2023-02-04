@@ -2,21 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   line-height: 1.4;
   word-break: keep-all;
   word-wrap: break-word;
 }
-
-body {
-  height: 100vh;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-}
-
-li {list-style: none;}
-a {text-decoration: none;}
 
 #root {
   display: flex;
@@ -25,14 +15,30 @@ a {text-decoration: none;}
   align-items: center;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   --color-text: black;
   --color-bg: white;
+  --color-border: #dadada;
 }
 
 html.dark {
   --color-text: white;
   --color-bg: #232424;
+  --color-border: #3a3a3a;
 }
 
 /* 스크롤바 커스텀 */

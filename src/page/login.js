@@ -3,6 +3,7 @@ import userList from "../repository/userList";
 import useInput from "../util/useInput";
 import { useNavigate } from 'react-router-dom'
 import { userInformation } from "../reducers/actions";
+import { AiFillHome } from 'react-icons/ai';
 
 function Login() {
     const [id, idBind] = useInput('')
@@ -28,7 +29,7 @@ function Login() {
 
     return (
         <div className="login-wrapper">
-            <h1><a href='/'>icon</a></h1>
+            <h1><a href='/'><AiFillHome /></a></h1>
             <h2>로그인 페이지</h2>
             <div className="input-wrapper">
                 <input placeholder="아이디" {...idBind} onKeyUp={handleSubmit}></input>

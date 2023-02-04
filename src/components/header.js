@@ -3,7 +3,7 @@ import { FaUser } from 'react-icons/fa';
 // import { logo } from '../../public/img/logo.png';
 import { HiMoon, HiSun } from 'react-icons/hi';
 import { useDarkMode } from './DarkMode/DarkMode';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { webtoons } from '../repository/webtoons';
 import styles from './header.module.css';
 import { Link } from 'react-router-dom'
@@ -12,6 +12,18 @@ const Header = ({ setFilteredData }) => {
   const [inputView, setInputView] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const { darkMode, toggleDarkMode } = useDarkMode();
+
+  useEffect(() => {
+    if (localStorage.getItem('user') !== null) {
+      setIsLogin(true);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   inputView === true ?
+  //     setFilteredData(webtoons)
+  //     : null;
+  // }, [inputView]);
 
   const handleSearch = e => {
     setFilteredData(webtoons.filter(ele => ele.title.includes(e.target.value)));

@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./webtoonList.module.css";
+import { useSelector } from "react-redux";
 
 export default function WebtoonList({ filteredData }) {
+  const { searchReducer } = useSelector(state => state);
+
   return (
     <div className={styles.list_wrap}>
       <ul className={styles.container}>

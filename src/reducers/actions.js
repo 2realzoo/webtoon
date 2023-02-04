@@ -1,8 +1,8 @@
-export const USER_INFORMATION = "USER_INFORMATION";
+export const IS_ACTIVE_SEARCH = "IS_ACTIVE_SEARCH";
 
-export const userInformation = (user) => {
+export const isActiveSearch = (state) => {
     return {
-        type: USER_INFORMATION,
-        payload: user
+        type: IS_ACTIVE_SEARCH,
+        payload : state,
     }
 };

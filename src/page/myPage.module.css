@@ -9,8 +9,15 @@
 }
 
 .home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
   position: absolute;
-  top: 10px;
+  top: 0;
+  z-index: 88;
+  padding-top: 10px;
 }
 
 .user_wrap {

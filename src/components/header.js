@@ -2,7 +2,6 @@ import { FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 // import { logo } from '../../public/img/logo.png';
 import { HiMoon, HiSun } from 'react-icons/hi';
-import { AiFillHome } from 'react-icons/ai';
 import { useDarkMode } from './DarkMode/DarkMode';
 import { useEffect, useState } from 'react';
 import { webtoons } from '../repository/webtoons';
@@ -49,7 +48,7 @@ const Header = () => {
             <FaUser />
           </Link>
         )}
-        <span className={styles.hoom}><a href="/"><AiFillHome /></a></span>
+        <span className={styles.hoom}><a href="/">WEBTOON</a></span>
         {inputView ? (
           <div className={styles.search}>
             <input

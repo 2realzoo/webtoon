@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { filterData, selectedDay } from "../reducers/actions";
 
 function FilterBar() {
-    const genres = ["드라마", "일상", "개그", "로맨스", "무협", "스포츠", "액션", "스릴러", "판타지"].sort((a, b) => a - b)
+    const genres = ["드라마", "일상", "개그", "로맨스", "무협/사극", "스포츠", "액션", "스릴러", "판타지"].sort((a, b) => a - b)
     const days = ["월", "화", "수", "목", "금", "토", "일"];
     const [useFilter, setUseFilter] = useState(false);
     const { searchReducer, dayReducer } = useSelector(state => state);

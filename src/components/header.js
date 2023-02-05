@@ -35,24 +35,28 @@ const Header = ({ setFilteredData }) => {
       <span className={styles.darkmode} onClick={toggleDarkMode}>{!darkMode ? <HiMoon /> : <HiSun />}</span>
       <header className={styles.header}>
         {isLogin ? (
-          <Link to="/mypage">
+          <Link to="/mypage" className={styles.user}>
             <FaUser />
           </Link>
         ) : (
-          <Link to="/Login">
+          <Link to="/Login" className={styles.user}>
             <FaUser />
           </Link>
         )}
-        <span className="webtoon-logo"><a href="/"><AiFillHome /></a></span>
+        <span className={styles.hoom}><a href="/"><AiFillHome /></a></span>
         {inputView ? (
-          <input
-            type="text"
-            onChange={handleSearch}
-            autoFocus
-            onBlur={() => setInputView(false)}
-          ></input>
+          <div className={styles.search}>
+            <input
+              type="text"
+              onChange={handleSearch}
+              autoFocus
+              onBlur={() => setInputView(false)}
+              className={styles.search_input}
+              placeholder="Search..."
+            />
+          </div>
         ) : (
-          <span className="search-icon" onClick={() => setInputView(true)}>
+          <span className={styles.search} onClick={() => setInputView(true)}>
             <FaSearch />
           </span>
         )}

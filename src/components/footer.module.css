@@ -1,12 +1,13 @@
 .footer {
   width: 100vw;
   height: 90px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  z-index: -1;
+  z-index: 98;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #646464;
   border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg);
 }

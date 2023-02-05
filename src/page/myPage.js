@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { AiFillHome } from 'react-icons/ai';
 
 function MyPage() {
     const {userId, img, info} = (JSON.parse(localStorage.getItem('user')));
@@ -11,9 +12,9 @@ function MyPage() {
 
     return (
         <div className='mypage-wrapper'>
-            <h1><a href="/">icon</a></h1>
+            <h1><a href="/"><AiFillHome /></a></h1>
             <div className="userId">{userId}</div>
-            <img src={img} />
+            <img src={img} alt={userId} style={{width: '200px', height: '200px'}} />
             <div className="info">{info}</div>
             <button className="logout-btn" onClick={handleLogout}>logout</button>
         </div>

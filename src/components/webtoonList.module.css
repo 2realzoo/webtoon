@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
 
 .list_wrap {
-  width: 1420px;
-  height: 80vh;
+  width: 100vw;
+  height: 75vh;
   overflow-y: auto;
   display: flex;
   justify-content: center;
 }
 
 .container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -42,11 +43,7 @@
 
 /* 4 */
 @media screen and (max-width: 768px) {
-  .list_wrap {
-    /* background-color: red; */
-  }
   .container {
-    width: 100vw;
     display: flex;
     justify-content: center;
   }
@@ -62,16 +59,14 @@
 
 /* 8 */
 @media screen and (min-width: 768px) and (max-width: 1280px) {
-  .list_wrap {
-    /* background-color: blue; */
-    
+  .container {
+    padding-left: 3rem;
   }
 }
 
 /* 9 */
 @media screen and (min-width: 1281px) {
-  .list_wrap {
-    /* background-color: purple; */
-
+  .container {
+    padding-left: 2.5rem;
   }
 }

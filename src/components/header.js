@@ -2,6 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 // import { logo } from '../../public/img/logo.png';
 import { HiMoon, HiSun } from 'react-icons/hi';
+import { AiFillHome } from 'react-icons/ai';
 import { useDarkMode } from './DarkMode/DarkMode';
 import { useEffect, useState } from 'react';
 import { webtoons } from '../repository/webtoons';
@@ -35,14 +36,14 @@ const Header = ({ setFilteredData }) => {
       <header className={styles.header}>
         {isLogin ? (
           <Link to="/mypage">
-            <FaUser></FaUser>
+            <FaUser />
           </Link>
         ) : (
           <Link to="/Login">
-            <FaUser></FaUser>
+            <FaUser />
           </Link>
         )}
-        <span className="webtoon-logo">icon</span>
+        <span className="webtoon-logo"><a href="/"><AiFillHome /></a></span>
         {inputView ? (
           <input
             type="text"
@@ -52,7 +53,7 @@ const Header = ({ setFilteredData }) => {
           ></input>
         ) : (
           <span className="search-icon" onClick={() => setInputView(true)}>
-            <FaSearch></FaSearch>
+            <FaSearch />
           </span>
         )}
       </header>

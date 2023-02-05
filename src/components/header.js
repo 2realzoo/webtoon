@@ -8,11 +8,14 @@ import { useEffect, useState } from 'react';
 import { webtoons } from '../repository/webtoons';
 import styles from './header.module.css';
 import { Link } from 'react-router-dom'
+import { useDispatch } from "react-redux";
+import { filterData, isActiveSearch, selectedDay } from "../reducers/actions";
 
-const Header = ({ setFilteredData }) => {
+const Header = () => {
   const [inputView, setInputView] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (localStorage.getItem('user') !== null) {
@@ -20,14 +23,17 @@ const Header = ({ setFilteredData }) => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   inputView === true ?
-  //     setFilteredData(webtoons)
-  //     : null;
-  // }, [inputView]);
+  useEffect(() => {
+    dispatch(isActiveSearch(inputView));
+    if (inputView === true) {
+      dispatch(filterData(webtoons));
+      dispatch(selectedDay(""));
+    }
+    
+  },[inputView])
 
   const handleSearch = e => {
-    setFilteredData(webtoons.filter(ele => ele.title.includes(e.target.value)));
+    dispatch(filterData(webtoons.filter(ele => ele.title.includes(e.target.value))))
   };
 
   return (

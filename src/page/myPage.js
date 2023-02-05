@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { AiFillHome } from 'react-icons/ai';
+import styles from './myPage.module.css';
 
 function MyPage() {
     const {userId, img, info} = (JSON.parse(localStorage.getItem('user')));
@@ -11,12 +12,14 @@ function MyPage() {
     }
 
     return (
-        <div className='mypage-wrapper'>
-            <h1><a href="/"><AiFillHome /></a></h1>
-            <div className="userId">{userId}</div>
-            <img src={img} alt={userId} style={{width: '200px', height: '200px'}} />
-            <div className="info">{info}</div>
-            <button className="logout-btn" onClick={handleLogout}>logout</button>
+        <div className={styles.mypage_wrap}>
+            <h1 className={styles.home}><a href="/"><AiFillHome /></a></h1>
+            <div className={styles.user_wrap}>
+                <div className={styles.userId}>반가워요! <span>{userId}</span> 님,</div>
+                <img src={img} alt={userId} className={styles.avatar} />
+                <div className={styles.info}>{info}</div>
+                <button className={styles.button} onClick={handleLogout}>Logout</button>
+            </div>
         </div>
     )
 }

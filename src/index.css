@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +23,8 @@ body {
   height: 100vh;
   background-color: var(--color-bg);
   color: var(--color-text);
+  position: relative;
+  overflow: hidden;
 }
 li {
   list-style: none;
@@ -33,12 +38,16 @@ a {
   --color-text: black;
   --color-bg: white;
   --color-border: #dadada;
+  --color-input: #fcfcfc;
+  --color-select: rgba(84, 84, 84, 0.9);
 }
 
 html.dark {
   --color-text: white;
   --color-bg: #232424;
   --color-border: #3a3a3a;
+  --color-input: #1b1b1b;
+  --color-select: rgba(255, 255, 255, 0.9);
 }
 
 /* 스크롤바 커스텀 */

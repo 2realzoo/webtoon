@@ -1,5 +1,5 @@
 export function filterByDay(webtoons, day) {
-    const filteredData = webtoons.filter(webtoon => webtoon.day === day);
+    const filteredData = webtoons.filter(webtoon => webtoon.day.includes(day));
     return filteredData;
 }
 

@@ -1,9 +1,11 @@
 .header {
-  width: 480px;
-  height: 5vh;
+  width: 100vw;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 2rem;
+  font-size: 1.2rem;
 }
 
 .header > * {

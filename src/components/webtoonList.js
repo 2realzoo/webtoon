@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./webtoonList.module.css";
 import { useSelector } from "react-redux";
 
-export default function WebtoonList({ filteredData }) {
-  const { searchReducer } = useSelector(state => state);
+export default function WebtoonList() {
+  const { dataReducer } = useSelector(state => state);
 
   return (
     <div className={styles.list_wrap}>
       <ul className={styles.container}>
-        {filteredData.length === 0? '해당하는 콘텐츠가 없습니다':
-          filteredData.map((toon) => {
+        {dataReducer.length === 0? '해당하는 콘텐츠가 없습니다':
+          dataReducer.map((toon) => {
           return (
             <li className={styles.li} key={toon.id}>
               <a href={toon.url}>

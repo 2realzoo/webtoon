@@ -3,28 +3,25 @@ import { webtoons } from "../repository/webtoons";
 import { filterByDay, filterByGenre } from "./filters";
 import './filterBar.css';
 import {FaFilter} from 'react-icons/fa'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { filterData, selectedDay } from "../reducers/actions";
 
-function FilterBar({ filteredData, setFilteredData }) {
+function FilterBar() {
     const genres = ["드라마", "일상", "개그", "로맨스", "무협", "스포츠", "액션", "스릴러", "판타지"].sort((a, b) => a - b)
     const days = ["월", "화", "수", "목", "금", "토", "일"];
-    const currentDay = new Date().getDay() - 1 >= 0 ? days[new Date().getDay() - 1] : days[6];
-    const [selectedDay, setSelectedDay] = useState(currentDay);
     const [useFilter, setUseFilter] = useState(false);
-    const { searchReducer } = useSelector(state => state);
-
+    const { searchReducer, dayReducer } = useSelector(state => state);
+    const dispatch = useDispatch();
 
     const handleClickDay = e => {
-        setSelectedDay(e.target.textContent);
+        dispatch(selectedDay(e.target.textContent))
     };
 
     useEffect(() => {
-        setFilteredData(filterByDay(webtoons, selectedDay));
-    }, [selectedDay])
-
-    useEffect(() => {
-        
-    }, [searchReducer])
+        if (dayReducer.length !== 0) {
+           dispatch(filterData(filterByDay(webtoons, dayReducer))); 
+        }
+    }, [dayReducer])
 
     const handleClickFilter = () => {
         useFilter? setUseFilter(false) :setUseFilter(true);
@@ -32,8 +29,8 @@ function FilterBar({ filteredData, setFilteredData }) {
 
     const handleClickGenre = e => {
         const selectedGenre = e.target.textContent;
-        const DayContent = filterByDay(webtoons, selectedDay);
-        setFilteredData(filterByGenre(DayContent, selectedGenre));
+        const DayContent = filterByDay(webtoons, dayReducer);
+        dispatch(filterData(filterByGenre(DayContent, selectedGenre)));
     }
 
     return (
@@ -42,7 +39,7 @@ function FilterBar({ filteredData, setFilteredData }) {
                 <ul>
                     {days.map((day, idx) => 
                         <li key={idx} onClick={handleClickDay}>
-                            <p className={selectedDay === day && searchReducer === false ? `active` : ``}>{day}</p>
+                            <p className={dayReducer === day && searchReducer === false ? `active` : ``}>{day}</p>
                         </li>
                     )}
                 </ul>

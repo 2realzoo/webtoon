@@ -16,6 +16,7 @@ export default function WebtoonList() {
                 <img className={styles.toon} src={toon.img} alt={toon.title} />
                 <div className={styles.title}>{toon.title}</div>
               </a>
+              <div className="bookmark"></div>
             </li>
           );
         })}

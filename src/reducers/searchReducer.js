@@ -1,4 +1,4 @@
-import { IS_ACTIVE_SEARCH } from "./actions"
+import { IS_ACTIVE_SEARCH } from "./actions.js"
 
 const initialState = false;
 

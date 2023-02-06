@@ -1,5 +1,5 @@
-import { FILTER_DATA } from "./actions";
-import { webtoons } from "../repository/webtoons";
+import { FILTER_DATA } from "./actions.js";
+import { webtoons } from "../repository/webtoons.js";
 
 const initialState = webtoons;
 

@@ -1,8 +1,8 @@
-import WebtoonList from '../components/webtoonList'
-import Header from '../components/header';
-import FilterBar from '../components/filterBar';
+import WebtoonList from '../components/webtoonList.js'
+import Header from '../components/header.js';
+import FilterBar from '../components/filterBar.js';
 import { useState } from 'react';
-import DarkModeProvider from '../components/DarkMode/DarkMode';
+import DarkModeProvider from '../components/DarkMode/DarkMode.js';
 
 const Home = () => {
     const [inputView, setInputView] = useState(false);

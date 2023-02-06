@@ -1,4 +1,4 @@
-import { SELECTED_DAY } from "./actions";
+import { SELECTED_DAY } from "./actions.js";
 
 const days = ["월", "화", "수", "목", "금", "토", "일"];
 const currentDay = new Date().getDay() - 1 >= 0 ? days[new Date().getDay() - 1] : days[6];

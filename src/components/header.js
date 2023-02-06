@@ -1,14 +1,13 @@
 import { FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
-// import { logo } from '../../public/img/logo.png';
 import { HiMoon, HiSun } from 'react-icons/hi';
-import { useDarkMode } from './DarkMode/DarkMode';
+import { useDarkMode } from './DarkMode/DarkMode.js';
 import { useEffect, useState } from 'react';
-import { webtoons } from '../repository/webtoons';
+import { webtoons } from '../repository/webtoons.js';
 import styles from './header.module.css';
 import { Link } from 'react-router-dom'
 import { useDispatch } from "react-redux";
-import { filterData, isActiveSearch, selectedDay } from "../reducers/actions";
+import { filterData, isActiveSearch, selectedDay } from "../reducers/actions.js";
 
 const Header = () => {
   const [inputView, setInputView] = useState(false);

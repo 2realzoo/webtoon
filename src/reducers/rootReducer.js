@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import searchReducer from './searchReducer';
-import dataReducer from './dataReducer';
-import dayReducer from './dayReducer';
+import searchReducer from './searchReducer.js';
+import dataReducer from './dataReducer.js';
+import dayReducer from './dayReducer.js';
 
 const rootReducer = combineReducers({
     searchReducer,

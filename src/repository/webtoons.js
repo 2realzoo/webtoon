@@ -1530,14 +1530,6 @@ export const webtoons = [
     genre: '무협/사극',
   },
   {
-    id: 'sun15',
-    title: '가비지타임',
-    day: ['일'],
-    img: '../img/sun15.jpeg',
-    url: 'https://comic.naver.com/webtoon/list?titleId=703844&weekday=sun',
-    genre: '스포츠',
-  },
-  {
     id: 'sun16',
     title: '고양이 타타',
     day: ['일'],

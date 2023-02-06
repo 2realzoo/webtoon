@@ -2,7 +2,6 @@ import { useState } from "react";
 import userList from "../repository/userList";
 import useInput from "../util/useInput";
 import { useNavigate } from 'react-router-dom'
-import { userInformation } from "../reducers/actions";
 import styles from './login.module.css';
 
 function Login() {

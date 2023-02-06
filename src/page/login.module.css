@@ -8,8 +8,10 @@
 }
 
 .home {
-  position: absolute;
-  top: 10px;
+  font-family: 'Lilita One', cursive;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  padding-top: 10px;
 }
 
 .input_wrap {

@@ -15,6 +15,7 @@
     align-items: center;
     padding: 0 2rem 0 0;
     font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
 }
 .day-filter li {
     color: var( --color-text);

@@ -3,7 +3,6 @@ import userList from "../repository/userList";
 import useInput from "../util/useInput";
 import { useNavigate } from 'react-router-dom'
 import { userInformation } from "../reducers/actions";
-import { AiFillHome } from 'react-icons/ai';
 import styles from './login.module.css';
 
 function Login() {
@@ -30,9 +29,9 @@ function Login() {
 
     return (
         <div className={styles.login_wrap}>
-            <h1 className={styles.home}><a href='/'><AiFillHome /></a></h1>
             {/* <h2>로그인 페이지</h2> */}
             <div className={styles.input_wrap}>
+                <h1 className={styles.home}><a href='/'>WEBTOON</a></h1>
                 <input className={styles.login} placeholder="아이디" {...idBind} onKeyUp={handleSubmit}></input>
                 <input className={styles.login} type='password' placeholder="비밀번호" {...passwordBind} onKeyUp={handleSubmit}></input>
                 <input className={styles.button} type="submit" value="로그인" onClick={handleSubmit}></input>

@@ -29,8 +29,7 @@ const Header = () => {
       dispatch(filterData(webtoons));
       dispatch(selectedDay(""));
     }
-    
-  },[inputView])
+  }, [inputView]);
 
   const handleSearch = e => {
     dispatch(filterData(webtoons.filter(ele => ele.title.includes(e.target.value))))

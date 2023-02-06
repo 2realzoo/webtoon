@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { webtoons } from "../repository/webtoons";
-import { filterByDay, filterByGenre } from "./filters";
+import { webtoons } from "../repository/webtoons.js";
+import { filterByDay, filterByGenre } from "./filters.js";
 import './filterBar.css';
 import {FaFilter} from 'react-icons/fa'
 import { useSelector, useDispatch } from "react-redux";
-import { filterData, selectedDay } from "../reducers/actions";
+import { filterData, selectedDay } from "../reducers/actions.js";
 
 function FilterBar() {
     const genres = ["드라마", "일상", "개그", "로맨스", "무협/사극", "스포츠", "액션", "스릴러", "판타지"].sort((a, b) => a - b)

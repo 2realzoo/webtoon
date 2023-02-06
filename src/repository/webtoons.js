@@ -1298,14 +1298,6 @@ export const webtoons = [
     genre: '드라마',
   },
   {
-    id: 'sat16',
-    title: '윌유메리미',
-    day: ['토'],
-    img: '../img/sat16.jpg',
-    url: 'https://comic.naver.com/webtoon/list?titleId=616239&weekday=sat',
-    genre: '일상',
-  },
-  {
     id: 'sat17',
     title: '청춘 블라썸',
     day: ['토'],

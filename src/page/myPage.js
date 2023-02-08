@@ -9,7 +9,7 @@ function MyPage() {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/webtoon/");
+    navigate("/");
   };
 
   return (

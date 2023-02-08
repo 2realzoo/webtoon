@@ -19,7 +19,7 @@ function FilterBar() {
 
     useEffect(() => {
         if (dayReducer.length !== 0) {
-           dispatch(filterData(filterByDay(webtoons, dayReducer))); 
+            dispatch(filterData(filterByDay(webtoons, dayReducer))); 
         }
     }, [dayReducer])
 

@@ -42,7 +42,7 @@ const Header = () => {
             <FaUser />
           </Link>
         ) : (
-          <Link to="/Login" className={styles.user}>
+          <Link to="/login" className={styles.user}>
             <FaUser />
           </Link>
         )}

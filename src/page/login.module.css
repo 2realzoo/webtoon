@@ -40,6 +40,7 @@
   border-radius: 0.5rem;
   border: 1px solid var(--color-border);
   background-color: var(--color-border);
+  margin-top: 1.5rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
   color: var(--color-text);
@@ -49,6 +50,6 @@
   position: absolute;
   margin-top: 1rem;
   font-size: 12px;
-  bottom: 9rem;
+  bottom: 10rem;
   color: red;
 }

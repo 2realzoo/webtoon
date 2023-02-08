@@ -13,7 +13,7 @@ function MyPage() {
 
     return (
         <div className={styles.mypage_wrap}>
-            <h1 className={styles.home}><a href="/webtoon"><AiFillHome /></a></h1>
+            <h1 className={styles.home}><a href="/"><AiFillHome /></a></h1>
             <div className={styles.user_wrap}>
                 <div className={styles.userId}>반가워요! <span>{userId}</span> 님,</div>
                 <img src={img} alt={userId} className={styles.avatar} />

@@ -692,7 +692,7 @@ export const webtoons = [
   {
     id: 'wed27',
     title: '이십팔세기 광팬',
-    day: ['수'],
+    day: ['수','토'],
     img: './img/wed27.jpg',
     url: 'https://comic.naver.com/webtoon/list?titleId=800312&weekday=wed',
     genre: '개그',
@@ -1328,14 +1328,6 @@ export const webtoons = [
     img: './img/sat20.jpg',
     url: 'https://comic.naver.com/webtoon/list?titleId=769568&weekday=sat',
     genre: '로맨스',
-  },
-  {
-    id: 'sat21',
-    title: '이십팔세기 광팬',
-    day: ['토'],
-    img: './img/sat21.jpg',
-    url: 'https://comic.naver.com/webtoon/list?titleId=800312&weekday=sat',
-    genre: '개그',
   },
   {
     id: 'sat22',

@@ -30,7 +30,7 @@ function Login() {
         <div className={styles.login_wrap}>
             {/* <h2>로그인 페이지</h2> */}
             <div className={styles.input_wrap}>
-                <h1 className={styles.home}><a href='/'>WEBTOON</a></h1>
+                <h1 className={styles.home}><a href='/webtoon'>WEBTOON</a></h1>
                 <input className={styles.login} placeholder="아이디" {...idBind} onKeyUp={handleSubmit}></input>
                 <input className={styles.login} type='password' placeholder="비밀번호" {...passwordBind} onKeyUp={handleSubmit}></input>
                 <input className={styles.button} type="submit" value="로그인" onClick={handleSubmit}></input>

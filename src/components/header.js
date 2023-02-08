@@ -1,13 +1,17 @@
 import { FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
-import { HiMoon, HiSun } from 'react-icons/hi';
-import { useDarkMode } from './DarkMode/DarkMode.js';
-import { useEffect, useState } from 'react';
-import { webtoons } from '../repository/webtoons.js';
-import styles from './header.module.css';
-import { Link } from 'react-router-dom'
+import { HiMoon, HiSun } from "react-icons/hi";
+import { useDarkMode } from "./DarkMode/DarkMode.js";
+import { useEffect, useState } from "react";
+import { webtoons } from "../repository/webtoons.js";
+import styles from "./header.module.css";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { filterData, isActiveSearch, selectedDay } from "../reducers/actions.js";
+import {
+  filterData,
+  isActiveSearch,
+  selectedDay,
+} from "../reducers/actions.js";
 
 const Header = () => {
   const [inputView, setInputView] = useState(false);
@@ -16,7 +20,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (localStorage.getItem('user') !== null) {
+    if (localStorage.getItem("user") !== null) {
       setIsLogin(true);
     }
   }, []);
@@ -29,13 +33,17 @@ const Header = () => {
     }
   }, [inputView]);
 
-  const handleSearch = e => {
-    dispatch(filterData(webtoons.filter(ele => ele.title.includes(e.target.value))))
+  const handleSearch = (e) => {
+    dispatch(
+      filterData(webtoons.filter((ele) => ele.title.includes(e.target.value)))
+    );
   };
 
   return (
     <>
-      <span className={styles.darkmode} onClick={toggleDarkMode}>{!darkMode ? <HiMoon /> : <HiSun />}</span>
+      <span className={styles.darkmode} onClick={toggleDarkMode}>
+        {!darkMode ? <HiMoon /> : <HiSun />}
+      </span>
       <header className={styles.header}>
         {isLogin ? (
           <Link to="/mypage" className={styles.user}>
@@ -46,7 +54,9 @@ const Header = () => {
             <FaUser />
           </Link>
         )}
-        <span className={styles.hoom}><a href="/">WEBTOON</a></span>
+        <span className={styles.hoom}>
+          <Link to="/webtoon/">WEBTOON</Link>
+        </span>
         {inputView ? (
           <div className={styles.search}>
             <input

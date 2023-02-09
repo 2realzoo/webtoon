@@ -10,7 +10,7 @@ import store from './store/store.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/webtoon/">
       <React.StrictMode>
           <App />
       </React.StrictMode>

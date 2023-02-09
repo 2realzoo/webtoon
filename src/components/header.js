@@ -46,7 +46,7 @@ const Header = () => {
             <FaUser />
           </Link>
         )}
-        <span className={styles.hoom}><a href="/webtoon">WEBTOON</a></span>
+        <span className={styles.hoom}><Link to='/'>WEBTOON</Link></span>
         {inputView ? (
           <div className={styles.search}>
             <input

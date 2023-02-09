@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/webtoon' element={<Home />}></Route>
+        <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/mypage' element={<MyPage />}></Route>
       </Routes>

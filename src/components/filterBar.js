@@ -29,8 +29,13 @@ function FilterBar() {
 
     const handleClickGenre = e => {
         const selectedGenre = e.target.textContent;
-        const DayContent = filterByDay(webtoons, dayReducer);
-        dispatch(filterData(filterByGenre(DayContent, selectedGenre)));
+        if(dayReducer !== "") {
+            const DayContent = filterByDay(webtoons, dayReducer);
+            dispatch(filterData(filterByGenre(DayContent, selectedGenre)));
+        }
+        else {
+             dispatch(filterData(filterByGenre(webtoons, selectedGenre)));
+        }
     }
 
     return (

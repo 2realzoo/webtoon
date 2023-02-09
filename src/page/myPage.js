@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome } from 'react-icons/ai';
+import styles from './myPage.module.css';
 import { Link } from "react-router-dom";
-import styles from "./myPage.module.css";
 
 function MyPage() {
   const { userId, img, info } = JSON.parse(localStorage.getItem("user"));
@@ -15,7 +15,7 @@ function MyPage() {
   return (
     <div className={styles.mypage_wrap}>
       <h1 className={styles.home}>
-        <Link to="/webtoon/">
+        <Link to="/">
           <AiFillHome />
         </Link>
       </h1>

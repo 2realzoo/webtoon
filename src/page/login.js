@@ -1,7 +1,7 @@
 import { useState } from "react";
 import userList from "../repository/userList.js";
 import useInput from "../util/useInput.js";
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './login.module.css';
 import { Link } from "react-router-dom";
 
@@ -31,7 +31,7 @@ function Login() {
         <div className={styles.login_wrap}>
             {/* <h2>로그인 페이지</h2> */}
             <div className={styles.input_wrap}>
-                <h1 className={styles.home}><Link to='/webtoon/'>WEBTOON</Link></h1>
+                <h1 className={styles.home}><Link to="/">WEBTOON</Link></h1>
                 <input className={styles.login} placeholder="아이디" {...idBind} onKeyUp={handleSubmit}></input>
                 <input className={styles.login} type='password' placeholder="비밀번호" {...passwordBind} onKeyUp={handleSubmit}></input>
                 <input className={styles.button} type="submit" value="로그인" onClick={handleSubmit}></input>

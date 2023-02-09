@@ -3,6 +3,7 @@ import userList from "../repository/userList.js";
 import useInput from "../util/useInput.js";
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './login.module.css';
+import { Link } from "react-router-dom";
 
 function Login() {
     const [id, idBind] = useInput('')
